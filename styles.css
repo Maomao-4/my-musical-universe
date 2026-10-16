@@ -1,0 +1,536 @@
+*{
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    color: #f9f1ff;
+    background: #17152f;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 22px 8%;
+    background: #211c42;
+}
+
+.logo{
+    color: #e3c3ff;
+    font-size: 21px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #f9f1ff;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #e3a9ff;
+}
+s
+.hero{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 35px;
+    padding: 70px 8%;
+    background:
+        adial-gradient(circle at 15% 20%, #54417c, transparent 35%),
+        linear-gradient(135deg, #211c42, #493264, #211c42);
+}
+
+.etiqueta {
+    color: #e3a9ff;
+}
+
+h1 {
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.15;
+}
+
+.bienvenida > p:not(.etiqueta) {
+    line-height: 1.8;
+    color: #ded3ed;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 13px 20px;
+    background: #b78bdb;
+    color: #211c42;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #e3a9ff;
+    color: #211c42;
+}
+
+.reproductor {
+    text-align: center;
+    padding: 30px;
+    border: 1px solid #a98acb;
+    border-radius: 25px;
+    background: #ffffff12;
+    box-shadow: 0 10px 35px #100b252e;
+}
+
+.disco {
+    display: grid;
+    place-items: center;
+    width: 145px;
+    height: 145px;
+    margin: 0 auto 25px;
+    border-radius: 50%;
+    background: repeating-radial-gradient(
+        circle, #28213f 0 5px, #44325f 6px 9px
+    );
+    border: 5px solid #8c6ab3;
+    color: #f5d8ff;
+    font-size: 45px;
+    animation: girar 12s linear infinite;
+}
+
+.subtitulo {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #d7b2fa;
+}
+
+#titulo-actual {
+    margin-bottom: 5px;
+}
+
+#artista-actual,
+.nota {
+    color: #d5c5e8;
+}
+
+.nota {
+    font-size: 13px;
+}
+
+.seccion {
+    padding: 456px 8%;
+    color:#f9f1ff;
+}
+
+.seccion h2 {
+    margin-bottom: 25px;
+}
+
+#buscador {
+    width: 100%;
+    max-width: 420px;
+    padding: 14px 18px;
+    margin-bottom: 25px;
+    border: 1px solid #82649f;
+    border-radius: 25px;
+    background: #282142;
+    color: white;
+    font-size: 15px;
+}
+
+#buscador::placeholder {
+    color: #c5b2d8;
+}
+
+.canciones-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap:18px;
+}
+
+.cancion {
+    padding: 12px;
+    border-radius: 18px;
+    background: #292343;
+    border: 1px solid #44345e;
+    transition: transform 0.2s;
+
+}
+
+.cancion:hover {
+    transform: translateY(-5px);
+}
+
+.portada {
+    display: grid;
+    place-items: center;
+    min-height: 145px;
+    border-radius: 12px;
+    font-size: 50px;
+}
+
+.portada-1 {
+    background: linear-gradient(145deg, #554f90, #bd9be1);
+}
+
+.portada-2 {
+    background: linear-gradient(145deg, #713e69, #d69bb7);
+}
+
+.portada-3 {
+    background: linear-gradient(145deg, #353f79, #9eaddf);
+}
+
+.portada-4 {
+    background: linear-gradient(145deg, #202e58, #806eb7);
+}
+
+.cancion h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.cancion p {
+    color: #cdbde1;
+    font-size: 14px;
+    margin-top: 0;
+}
+
+.acciones {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.seleccionar,
+.favorito {
+    border: none;
+    border-radius: 18px;
+    padding: 9px;
+    cursor: pointer;
+}
+
+.seleccionar {
+    background: #b78bdb;
+    color: #211c42;
+}
+
+.favorito {
+    background: #46345f;
+    color: white;
+    font-size: 20px;
+}
+
+.favorito.activo {
+    background: #f4c4e5;
+    color: #692c68;
+}
+
+.playlist {
+    margin: 20px 8% 50px;
+    padding: 30px;
+    text-align: center;
+    border-radius: 22px;
+    background: linear-gradient(135deg, #493264, #292343);
+    line-height: 1.8;
+}
+
+footer {
+    text-align: center;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    color: #f9f1ff;
+    background: #17152f;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 22px 8%;
+    background: #211c42;
+}
+
+.logo {
+    color: #e3c3ff;
+    font-size: 21px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #f9f1ff;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #e3a9ff;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 35px;
+    padding: 70px 8%;
+    background:
+        radial-gradient(circle at 15% 20%, #54417c, transparent 35%),
+        linear-gradient(135deg, #211c42, #493264, #211c42);
+}
+
+.etiqueta {
+    color: #e3a9ff;
+}
+
+h1 {
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.15;
+}
+
+.bienvenida > p:not(.etiqueta) {
+    line-height: 1.8;
+    color: #ded3ed;
+}
+
+.boton {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 13px 20px;
+    background: #b78bdb;
+    color: #211c42;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.reproductor {
+    text-align: center;
+    padding: 30px;
+    border: 1px solid #a98acb;
+    border-radius: 25px;
+    background: #ffffff12;
+    box-shadow: 0 10px 35px #100b252e;
+}
+
+.disco {
+    display: grid;
+    place-items: center;
+    width: 145px;
+    height: 145px;
+    margin: 0 auto 25px;
+    border-radius: 50%;
+    background: repeating-radial-gradient(
+        circle, #28213f 0 5px, #44325f 6px 9px
+    );
+    border: 5px solid #8c6ab3;
+    color: #f5d8ff;
+    font-size: 45px;
+    animation: girar 12s linear infinite;
+}
+
+.subtitulo {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #d7b2fa;
+}
+
+#titulo-actual {
+    margin-bottom: 5px;
+}
+
+#artista-actual,
+.nota {
+    color: #d5c5e8;
+}
+
+.nota {
+    font-size: 13px;
+}
+
+.seccion {
+    padding: 45px 8%;
+    color: #f9f1ff;
+}
+
+.seccion h2 {
+    margin-bottom: 25px;
+}
+
+#buscador {
+    width: 100%;
+    max-width: 420px;
+    padding: 14px 18px;
+    margin-bottom: 25px;
+    border: 1px solid #82649f;
+    border-radius: 25px;
+    background: #282142;
+    color: white;
+    font-size: 15px;
+}
+
+#buscador::placeholder {
+    color: #c5b2d8;
+}
+
+.canciones-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.cancion {
+    padding: 12px;
+    border-radius: 18px;
+    background: #292343;
+    border: 1px solid #44345e;
+    transition: transform 0.2s;
+}
+
+.cancion:hover {
+    transform: translateY(-5px);
+}
+
+.portada {
+    display: grid;
+    place-items: center;
+    min-height: 145px;
+    border-radius: 12px;
+    font-size: 50px;
+}
+
+.portada-1 {
+    background: linear-gradient(145deg, #554f90, #bd9be1);
+}
+
+.portada-2 {
+    background: linear-gradient(145deg, #713e69, #d69bb7);
+}
+
+.portada-3 {
+    background: linear-gradient(145deg, #353f79, #9eaddf);
+}
+
+.portada-4 {
+    background: linear-gradient(145deg, #202e58, #806eb7);
+}
+
+.cancion h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.cancion p {
+    color: #cdbde1;
+    font-size: 14px;
+    margin-top: 0;
+}
+
+.acciones {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.seleccionar,
+.favorito {
+    border: none;
+    border-radius: 18px;
+    padding: 9px;
+    cursor: pointer;
+}
+
+.seleccionar {
+    background: #b78bdb;
+    color: #211c42;
+}
+
+.favorito {
+    background: #46345f;
+    color: white;
+    font-size: 20px;
+}
+
+.favorito.activo {
+    background: #f4c4e5;
+    color: #692c68;
+}
+
+.playlist {
+    margin: 20px 8% 50px;
+    padding: 30px;
+    text-align: center;
+    border-radius: 22px;
+    background: linear-gradient(135deg, #493264, #292343);
+    line-height: 1.8;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@keyframes girar {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 800px) {
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 45px 7%;
+    }
+
+    .canciones-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 420px) {
+    .canciones-grid {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        gap: 12px;
+    }
+}

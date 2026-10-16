@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi universo musical 💜</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">♫ Mi universo</a>
+      <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#canciones">Canciones</a>
+        <a href="#playlist">Playlist</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio">
+        <div class="bienvenida">
+          <p class="etiqueta">✦ Un rincón para sentir ✦</p>
+          <h1>Mi pequeño universo musical 🌙</h1>
+          <p>
+            Canciones que cuentas historias, acompañan mis días y abrazan mi
+            corazón.
+          </p>
+
+          <a class="btn" href="#canciones"> Explorar canciones ♡</a>
+        </div>
+
+        <div class="reproductor">
+          <div class="disco">♫</div>
+          <p class="subtitulo">SONANDO EN MI UNIVERSO</p>
+          <h2 id="titulo-actual">Like Animals</h2>
+          <p id="artista-actual">BTS</p>
+          <p class="nota">♪ Selecciona una canción de la lista</p>
+        </div>
+      </section>
+
+      <section id="canciones" class="seccion">
+        <h2>✦ Mis canciones favoritas</h2>
+
+        <input
+          id="buscador"
+          type="text"
+          placeholder="Buscar canción o artista..."
+        />
+
+        <div id="lista-canciones" class="canciones-grid">
+          <article
+            class="cancion"
+            data-titulo="Like Animals"
+            data-artista="BTS"
+          >
+            <div class="portada portada-1">🌙</div>
+            <h3>Like Animals</h3>
+            <p>BTS</p>
+            <div class="acciones">
+              <button class="seleccionar">Escuchar ♫</button>
+              <button
+                class="favorito"
+                aria-label="Marcar favorita"
+                aria-pressed="false"
+              >
+                ♡
+              </button>
+            </div>
+          </article>
+
+          <article
+            class="cancion"
+            data-titulo="Coraline"
+            data-artista="Måneskin"
+          >
+            <div class="portada portada-2">🌹</div>
+            <h3>Coraline</h3>
+            <p>Måneskin</p>
+            <div class="acciones">
+              <button class="seleccionar">Escuchar ♫</button>
+              <button
+                class="favorito"
+                aria-label="Marcar favorita"
+                aria-pressed="false"
+              >
+                ♡
+              </button>
+            </div>
+          </article>
+
+          <article
+            class="cancion"
+            data-titulo="House of Cards"
+            data-artista="BTS"
+          >
+            <div class="portada portada-3">🎴</div>
+            <h3>House of Cards</h3>
+            <p>BTS</p>
+            <div class="acciones">
+              <button class="seleccionar">Escuchar ♫</button>
+              <button
+                class="favorito"
+                aria-label="Marcar favorita"
+                aria-pressed="false"
+              >
+                ♡
+              </button>
+            </div>
+          </article>
+
+          <article
+            class="cancion"
+            data-titulo="Dónde está el amor"
+            data-artista="Pablo Alborán"
+          >
+            <div class="portada portada-4">❤️‍🩹</div>
+            <h3>Dónde está el amor</h3>
+            <p>Pablo Alborán</p>
+            <div class="acciones">
+              <button class="seleccionar">Escuchar ♫</button>
+              <button
+                class="favorito"
+                aria-label="Marcar favorita"
+                aria-pressed="false"
+              >
+                ♡
+              </button>
+            </div>
+          </article>
+        </div>
+        <p id="sin-resultados" hidden>No encontramos esa canción 🌙</p>
+      </section>
+
+      <section id="playlist" class="playlist">
+        <h2>🎧 Mi pequeño rincón</h2>
+        <p>"La música expresa lo que a veces las palabras no pueden decir."</p>
+        <p>Hecho con ♡, estrellas y mucha música.</p>
+      </section>
+    </main>
+    <footer>
+      <p>© 2026 Mi universo musical. Todos los derechos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
